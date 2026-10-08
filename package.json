@@ -1,0 +1,37 @@
+{
+  "name": "nebula-data-plus",
+  "version": "1.12.0",
+  "private": true,
+  "description": "Nebula Data Plus Ghana data bundle store with secure Node.js backend and persistent PostgreSQL database",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "audit": "npm audit",
+    "audit:fix": "npm audit fix",
+    "prisma:generate": "prisma generate",
+    "prisma:validate": "prisma validate",
+    "prisma:migrate": "prisma migrate dev",
+    "prisma:deploy": "prisma migrate deploy",
+    "prisma:studio": "prisma studio",
+    "postinstall": "prisma generate",
+    "start:prod": "prisma migrate deploy && node server.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@prisma/client": "6.16.2",
+    "argon2": "0.41.1",
+    "cookie-parser": "1.4.7",
+    "dotenv": "16.4.7",
+    "express": "4.21.2",
+    "express-rate-limit": "7.5.0",
+    "helmet": "8.0.0",
+    "jsonwebtoken": "9.0.2",
+    "zod": "3.24.1"
+  },
+  "devDependencies": {
+    "prisma": "6.16.2"
+  }
+}
